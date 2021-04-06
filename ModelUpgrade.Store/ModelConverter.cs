@@ -95,7 +95,7 @@ namespace ModelUpgrade.Store
 
         private DataModel Upgrade(DataModel model)
         {
-            var modelType = _versionTypes.Value.FirstOrDefault(x => string.Equals(x.Name, model.ModelName, StringComparison.CurrentCultureIgnoreCase));
+            var modelType = _versionTypes.Value.FirstOrDefault(x => string.Equals(x.FullName, model.ModelName, StringComparison.CurrentCultureIgnoreCase));
 
             if (modelType == null)
             {
